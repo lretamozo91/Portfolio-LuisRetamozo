@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Globe, Layout, Settings, Smartphone } from "lucide-react";
 
-import luisBuildSection from "../assets/luis-build-workspace169.png";
+import luisBuildSection from "../assets/luis-build-workspace.png";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const services = [
@@ -9,25 +9,45 @@ const services = [
     icon: Globe,
     title: "Aplicaciones web y SaaS",
     description:
-      "Paneles administrativos, sistemas de reservas, plataformas internas, dashboards y gestión completa de usuarios.",
+      "Desarrollo plataformas web completas para gestionar procesos, usuarios, reservas, pagos, reportes y operaciones diarias.",
+    tags: [
+      "Paneles administrativos",
+      "Roles y permisos",
+      "Dashboards y reportes",
+    ],
   },
   {
     icon: Smartphone,
     title: "Aplicaciones mobile",
     description:
-      "Apps con React Native y Expo, autenticación, navegación, consumo de APIs y preparación para publicar en tiendas.",
+      "Construyo apps moviles modernas con React Native, pensadas para ofrecer una experiencia rapida, clara y conectada con servicios reales.",
+    tags: [
+      "React Native / Expo",
+      "Autenticacion y navegacion",
+      "Integracion con APIs",
+    ],
   },
   {
     icon: Settings,
     title: "Sistemas a medida",
     description:
-      "Automatización de procesos, reportes, roles, permisos, bases de datos y APIs pensadas para operaciones reales.",
+      "Digitalizo procesos internos creando sistemas adaptados a la forma real de trabajar de cada negocio, institucion o equipo.",
+    tags: [
+      "Gestion de datos",
+      "Automatizacion de procesos",
+      "Usuarios, estados y reportes",
+    ],
   },
   {
     icon: Layout,
     title: "Sitios web profesionales",
     description:
-      "Landings, sitios institucionales y portfolios claros, rápidos y orientados a conversión.",
+      "Creo sitios web modernos, claros y confiables para negocios, profesionales y emprendimientos que necesitan mejorar su presencia online.",
+    tags: [
+      "Landing pages",
+      "Sitios institucionales",
+      "Portfolios y marcas personales",
+    ],
   },
 ];
 
@@ -91,7 +111,7 @@ export function Services() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
               whileHover={{ y: -6 }}
-              className="group relative min-h-[13.2rem] overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(34,34,36,0.96)_0%,rgba(27,27,29,0.98)_100%)] p-6 shadow-[0_18px_48px_rgba(0,0,0,0.22)] transition-all duration-300 hover:border-[#ff4255]/35 hover:shadow-[0_20px_54px_rgba(255,66,85,0.1)]"
+              className="group relative flex min-h-[18.75rem] flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(34,34,36,0.96)_0%,rgba(27,27,29,0.98)_100%)] p-6 shadow-[0_18px_48px_rgba(0,0,0,0.22)] transition-all duration-300 hover:border-[#ff4255]/35 hover:shadow-[0_20px_54px_rgba(255,66,85,0.1)]"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ff4255]/55 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -106,6 +126,18 @@ export function Services() {
               <p className="mt-4 text-[1rem] leading-8 text-[#a8a8ad]">
                 {service.description}
               </p>
+
+              <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                {service.tags.map((tag) => (
+                  <motion.span
+                    key={tag}
+                    whileHover={{ y: -1 }}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-[0.78rem] font-medium leading-5 text-[#c9c9ce] transition-all duration-200 hover:border-[#ff4255]/30 hover:bg-[#ff4255]/8 hover:text-white"
+                  >
+                    {tag}
+                  </motion.span>
+                ))}
+              </div>
             </motion.article>
           ))}
         </div>
