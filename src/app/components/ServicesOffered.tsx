@@ -58,7 +58,6 @@ export function ServicesOffered() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="mx-auto mb-10 max-w-4xl text-center"
-          // className="mb-10"
         >
           <h2 className="mb-4 text-4xl font-bold md:text-5xl">
             Servicios <span className="text-[#E63946]">profesionales</span>
@@ -69,7 +68,6 @@ export function ServicesOffered() {
             e integraciones.
           </p>
         </motion.div>
-        {/* <div className="grid gap-12 lg:grid-cols-[minmax(300px,0.9fr)_minmax(0,1.1fr)] lg:items-start"> */}
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -77,7 +75,6 @@ export function ServicesOffered() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.75 }}
             className="order-2 lg:order-1 lg:sticky lg:top-24 lg:col-span-4"
-            // className="order-2 lg:order-1 lg:sticky lg:top-24"
           >
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-[#E63946]/18 blur-3xl" />
